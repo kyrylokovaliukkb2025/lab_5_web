@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Резюме — Кирило Ковалюк</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="hero" class="site-header">
+        <button id="theme-toggle" class="theme-toggle" type="button">🌙 Нічна тема</button>
+        <h1>Кирило Ковалюк</h1>
+        <p class="subtitle">Студент спеціальності "Кібербезпека" Національного університету "Львівська політехніка"</p>
+    </header>
+    <main class="layout">
+        <section id="contacts" class="card">
+            <h3>Контакти</h3>
+            <ul>
+                <li>Телефон: <a href="tel:+380991362649">+380 99 136 26 49</a></li>
+                <li>Email: <a href="mailto:kyrylo.kovaliuk.kb.2025@lpnu.ua">kyrylo.kovaliuk.kb.2025@lpnu.ua</a></li>
+                <li>Локація: м. Львів вул. Лукаша 5</li>
+            </ul>
+
+        </section>
+        <section id="education" class="card">
+            <h3>Освіта</h3>
+            <ul>
+                <li>Національний університет "Львівська політехніка"
+                    <p>Спеціальність: Кібербезпека (2025-****)</p> </li>
+            </ul>
+                
+        </section>
+        <section id="skills" class="card">
+            <h3>Навички</h3>
+            <ul class="skills-list">
+                <li><span class="badge">Python</span></li>
+                <li><span class="badge">C#</span></li>
+                <li><span class="badge">HTML/CSS</span></li>
+                <li><span class="badge">OSINT</span></li>
+            </ul>
+        </section>
+        <section id="experience" class="card">
+            <h3>Досвід</h3>
+            <ul>
+                    <li>Стажування в компанії "CyberSec Solutions" (2023-2024)
+                        <p>Розробка та тестування систем безпеки, аналіз вразливостей.</p>
+                    </li>
+                    <li>Проект "Безпечний веб-додаток" (2024)
+                        <p>Розробка веб-додатку з акцентом на безпеку та захист даних користувачів.</p>
+                    </li>
+                </ul>
+        </section>
+        <section id="reviews" class="card card-wide">
+            <h3>Відгуки попередніх роботодавців</h3>
+            <p id="reviews-status">Завантаження відгуків...</p>
+            <div id="reviews-list" class="reviews-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy; 2025 Кирило Ковалюк. Резюме створене для лабораторної роботи.</p>
+        <h4>Інфа про систему</h4>
+        <ul id="storage-info"></ul>
+    </footer>
+    <div id="modal" class="modal-overlay hidden">
+        <div class="modal">
+            <button id="modal-close" class="modal-close" type="button" aria-label="Закрити">&times;</button>
+            <h3>Зворотний зв'язок</h3>
+            <form action="https://formspree.io/f/mvkkwjkg" method="POST">
+                <label>Ім'я
+                    <input type="text" name="name" required>
+                </label>
+                <label>Email
+                    <input type="email" name="email" required>
+                </label>
+                <label>Номер телефону
+                    <input type="tel" name="phone" placeholder="+380..." required>
+                </label>
+                <label>Повідомлення
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+                <button type="submit" class="btn">Надіслати</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

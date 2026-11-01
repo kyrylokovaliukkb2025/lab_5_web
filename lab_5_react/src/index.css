@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* dark: класи Tailwind спрацьовують, коли на <html> є клас .dark */
+@custom-variant dark (&:where(.dark, .dark *));
