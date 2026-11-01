@@ -52,13 +52,13 @@ a {
 #hero {
     position: relative;
     padding: 40px 20px;
-    background-color: #2563eb;
+    background-color: #7c3aed;
     color: white;
     text-align: center;
 }
 
 body.dark #hero {
-    background-color: #1e3a8a;
+    background-color: #4c1d95;
 }
 
 .theme-toggle {
