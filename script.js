@@ -83,7 +83,12 @@ function initModal() {
     }
 
     closeBtn.addEventListener('click', close);
-    modal.addEventListener('click', e => { if (e.target === modal) close(); });
+    let pressedOnOverlay = false;
+    modal.addEventListener('mousedown', e => { pressedOnOverlay = e.target === modal; });
+    modal.addEventListener('click', e => {
+        if (pressedOnOverlay && e.target === modal) close();
+        pressedOnOverlay = false;
+    });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 }
 

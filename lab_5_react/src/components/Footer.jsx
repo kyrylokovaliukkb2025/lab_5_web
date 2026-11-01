@@ -4,7 +4,6 @@ function Footer() {
     const [storageData, setStorageData] = useState([]);
 
     useEffect(() => {
-        // 1. Зчитуємо інформацію про систему та браузер
         const systemInfo = {
             userAgent: navigator.userAgent,
             platform: navigator.platform,
@@ -14,12 +13,10 @@ function Footer() {
             timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         };
 
-        // 2. Зберігаємо в localStorage
         Object.entries(systemInfo).forEach(([key, value]) => {
             localStorage.setItem(key, String(value));
         });
 
-        // 3. Дістаємо все, що є в localStorage, для відображення
         const data = [];
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);

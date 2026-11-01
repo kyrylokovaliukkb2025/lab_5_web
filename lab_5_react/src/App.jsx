@@ -11,13 +11,11 @@ import Footer from './components/Footer';
 function App() {
     const [theme, setTheme] = useState('light');
 
-    // Автоматичне перемикання: 07:00–21:00 — світла, інакше темна
     useEffect(() => {
         const hours = new Date().getHours();
         setTheme(hours >= 7 && hours < 21 ? 'light' : 'dark');
     }, []);
 
-    // Застосування теми: клас .dark на <html>
     useEffect(() => {
         document.documentElement.classList.toggle('dark', theme === 'dark');
     }, [theme]);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const VARIANT = 10; // номер варіанта
+const VARIANT = 10;
 
 function Reviews() {
     const [comments, setComments] = useState([]);
